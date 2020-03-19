@@ -35,6 +35,7 @@ let customerSchema = new Schema({
         default: true
     }
 });
+
 autoIncrement.initialize(mongoose.connection);
 customerSchema.plugin(autoIncrement.plugin, {
     model: '_id',
@@ -44,7 +45,7 @@ customerSchema.plugin(autoIncrement.plugin, {
 });
 
 customerSchema.plugin(uniqueValidator, {
-message: '{PATH} Debe ser único y diferente'
+    message: '{PATH} Debe ser único y diferente'
 });
 
 module.exports = mongoose.model('Customer', customerSchema);

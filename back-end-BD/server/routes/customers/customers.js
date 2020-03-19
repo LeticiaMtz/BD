@@ -31,7 +31,7 @@ app.get('/customer/:id', (req, res) => {
                 });
             }
             return res.status(200).json({
-                
+
                 customers
             });
         });
@@ -39,7 +39,7 @@ app.get('/customer/:id', (req, res) => {
 //obtener customers por nombre
 app.get('/customer/name/:name', (req, res) => {
     let name = req.params.name;
-    Customer.find({ strStatus: true, First_Name: name })
+    Customer.find({ strStatus: true, strFirst_Name: name })
         .exec((err, customers) => {
             if (err) {
                 return res.status(400).json({

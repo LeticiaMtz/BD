@@ -33,6 +33,9 @@ app.use(bodyParser.json());
 
 
 app.use(require('./routes/customers/customers'));
+app.use(require('./routes/customers/listingsAndReviews'));
+app.use(require('./routes/customers/rents'));
+
 
 mongoose.connect('mongodb://localhost:27017/sample_airbnb', {
         useNewUrlParser: true,
@@ -49,4 +52,3 @@ mongoose.connect('mongodb://localhost:27017/sample_airbnb', {
 app.listen(process.env.PORT, () => {
     console.log('Escuchando por el puerto 3000 ', process.env.PORT);
 });
-
