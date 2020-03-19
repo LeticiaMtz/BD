@@ -1,8 +1,5 @@
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
-//const autoIncrement = require('mongoose-auto-increment');
-
-//autoIncrement.initialize(mongoose);
 
 let Schema = mongoose.Schema;
 
@@ -24,13 +21,6 @@ let rentSchema = new Schema({
     }
 
 });
-
-// rentSchema.plugin(autoIncrement.plugin, {
-//     model: '_id',
-//     field: '_id',
-//     startAt: 1,
-//     incrementBy: 1
-// });
 
 rentSchema.plugin(uniqueValidator, {
     message: '{PATH} Debe ser único y diferente'
