@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"sample_airbnb.rents"}],"uuid":"70c5c0a32d0d41948106a17cd639ee14"}
